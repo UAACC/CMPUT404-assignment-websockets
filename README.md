@@ -19,6 +19,12 @@ pip install -r requirements.txt
 
 Contributors / Licensing
 ========================
+Collaboration: team members
+
+* yanlin2
+* qsong
+* xutong2
+* pyu
 
 Generally everything is LICENSE'D under the Apache 2 license by Abram Hindle.
 
@@ -59,3 +65,4 @@ Contributors
 * Mark Galloway
 * Abram Hindle
 * Cole Mackenzie
+* dongheng li

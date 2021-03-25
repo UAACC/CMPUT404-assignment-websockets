@@ -249,6 +249,11 @@
         
         drawFrame();
       }
+      function get_world(info){
+        for (key in info) {
+                    world[key] =info[key];
+                  }
+      }
 
       function wsSetup() {
             var url = "ws://" + host + "/subscribe";
@@ -262,10 +267,9 @@
             socket.onmessage = function(msg) {
                 try {
                   debug("WebSocket Recv:" + msg.data);
-                  var message = JSON.parse(msg.data);
-                  for (let entity in message) {
-                    world[entity] = message[entity];
-                  }
+                  var info = JSON.parse(msg.data);
+                  get_world(info)
+                  
                     drawNextFrame();
                 } catch (e) {
                     alert("socket on message: " + e);
